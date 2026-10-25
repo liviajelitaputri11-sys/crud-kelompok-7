@@ -40,11 +40,18 @@
             <td>{{ $kendaraan->warna }}</td>
             <td>{{ $kendaraan->keterangan }}</td>
             <td>
-                <a ...>
-</a>
+               
 <a href="{{ route('kendaraan.edit', $kendaraan->id) }}">
-    Edit
-</a>
+    Edit</a>
+<from action="{{ route('kendaraan.destroy', $kendaraan->id) }}"
+method="POST" style="display: inline;">
+@csrf
+@method('DELETE')
+<button type="submit"
+   onclict="return confirm('Apakah anda yakin ingin menghapus kendaraan ini?')">
+    Hapus
+</button>
+</form>
 </td>
         </tr>
         @endforeach
