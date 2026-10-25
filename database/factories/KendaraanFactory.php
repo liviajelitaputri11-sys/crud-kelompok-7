@@ -20,8 +20,8 @@ class KendaraanFactory extends Factory
         'tipe'=> fake()->randomElement(['Avanza','Brio','Ertiga','Xenia']),
         'kategori'=> fake()->randomElement(['Mobil','Motor']),
         'tahun'=> fake()->numberBetween([2015,2026]),
-        'warna'=> fake()randomElement(['Hitam','Putih','Merah','Silver']),
-        'keterangan'=> fake()->sentence(),
+        'warna'=> fake()->randomElement(['Hitam','Putih','Merah','Silver']),
+        'keterangan'=> null,
         ];
     }
 }

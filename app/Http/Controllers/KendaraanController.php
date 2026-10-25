@@ -12,7 +12,9 @@ class KendaraanController extends Controller
      */
     public function index()
     {
-        //
+        $kendaraans = Kendaraan::all();
+
+        return view('kendaraan.index', compact('kendaraans'));
     }
 
     /**
@@ -20,20 +22,15 @@ class KendaraanController extends Controller
      */
     public function create()
     {
-        //
+    
     }
-
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
+          
+     }
     public function show(Kendaraan $kendaraan)
     {
         //
