@@ -44,7 +44,7 @@ class KendaraanController extends Controller
      */
     public function edit(Kendaraan $kendaraan)
     {
-        //
+        return view('kendaraan.edit', compact('kendaraan'));
     }
 
     /**
@@ -52,7 +52,9 @@ class KendaraanController extends Controller
      */
     public function update(Request $request, Kendaraan $kendaraan)
     {
-        //
+    $kendaraan->update($request->all());
+     return redirect()->route('kendaraan.index')
+     ->with('success', 'kendaraan berhasil diperbarui');
     }
 
     /**

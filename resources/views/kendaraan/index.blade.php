@@ -26,6 +26,7 @@
             <th>Tahun</th>
             <th>Warna</th>
             <th>Keterangan</th>
+            <th>Aksi</th>
         </tr>
 
         @foreach ($kendaraans as $kendaraan)
@@ -38,6 +39,13 @@
             <td>{{ $kendaraan->tahun }}</td>
             <td>{{ $kendaraan->warna }}</td>
             <td>{{ $kendaraan->keterangan }}</td>
+            <td>
+                <a ...>
+</a>
+<a href="{{ route('kendaraan.edit', $kendaraan->id) }}">
+    Edit
+</a>
+</td>
         </tr>
         @endforeach
     </table>
