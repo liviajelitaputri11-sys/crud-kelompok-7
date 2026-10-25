@@ -6,6 +6,15 @@
 </head>
 <body>
     <h1>Data Kendaraan</h1>
+    <p>
+        <a href="{{route('kendaraan.create') }}">
+            Tambah Kendaraan
+</a>
+@session('success')
+<p style="coloe: pink;">
+    {{ session('success')}}
+</p>
+@endsession
 
     <table border="1" cellpadding="8">
         <tr>

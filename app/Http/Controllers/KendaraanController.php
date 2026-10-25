@@ -22,14 +22,17 @@ class KendaraanController extends Controller
      */
     public function create()
     {
-    
+     return view('kendaraan.create');
     }
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-          
+          Kendaraan::create($request->all());
+
+          return redirect()->route('kendaraan.index')
+          ->with('success', 'kendaraan berhasil ditambahkan.');
      }
     public function show(Kendaraan $kendaraan)
     {
